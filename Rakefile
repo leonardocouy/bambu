@@ -19,10 +19,11 @@ task :pronto do
       info: :failure, warning: :failure, error: :failure, fatal: :failure
     }.freeze
   end
-  
+
   status_formatter = Pronto::Formatter::GithubStatusFormatter.new
   pr_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
   formatters = [status_formatter, pr_formatter]
+
   Pronto.run("origin/master", '.', formatters)
 end
 
