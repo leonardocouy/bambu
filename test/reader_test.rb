@@ -1,4 +1,4 @@
-require 'minitest/autorun'
+require 'helper'
 require_relative '../reader'
 
 describe Bambu::Reader do

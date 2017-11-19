@@ -1,4 +1,4 @@
-require "rake/testtask"
+require 'rake/testtask'
 
 task default: :test
 
@@ -23,6 +23,7 @@ task :pronto do
   formatter = Pronto::Formatter::GithubFormatter.new
   status_formatter = Pronto::Formatter::GithubStatusFormatter.new
   formatters = [formatter, status_formatter]
+  puts ENV["TRAVIS_PULL_REQUEST_BRANCH"]
   Pronto.run(ENV["TRAVIS_PULL_REQUEST_BRANCH"], '.', formatters)
 end
 

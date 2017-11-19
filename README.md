@@ -2,8 +2,9 @@ Bambu
 ===========
 
 ![](https://travis-ci.com/leonardocouy/bambu.svg?token=bxrKZyktZHisKxWszFGt&branch=master)
+[![codecov](https://codecov.io/gh/leonardocouy/bambu/branch/master/graph/badge.svg?token=NDnmdZomct)](https://codecov.io/gh/leonardocouy/bambu) 
 
-![](https://giphy.com/embed/LE5bApm6m0HrG)
+![](https://giphy.com/embed/LE5bApm6m0HrG) 
 
 ## Bambu? What the fuck???
 
