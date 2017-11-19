@@ -1,5 +1,5 @@
 require 'helper'
-require_relative '../reader'
+require_relative '../lib/reader'
 
 describe Bambu::Reader do
 
