@@ -13,7 +13,7 @@ Gem name is how it is pronounced in Brazilian Portuguese and another motive for 
 
 #### Keep calm, Bambu hasn't released yet
 
-![](https://media.giphy.com/media/LE5bApm6m0HrG/giphy.gif)
+![](http://media.giphy.com/media/LE5bApm6m0HrG/200.gif)
 
 ## Bambu's goals
 
