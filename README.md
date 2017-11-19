@@ -1,7 +1,7 @@
 Bambu
 ===========
 
-![](https://media.giphy.com/media/bMSMRrBm9vLfa/giphy.gif)
+![](https://giphy.com/embed/LE5bApm6m0HrG)
 
 ## Bambu? What the fuck???
 
