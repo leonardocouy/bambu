@@ -22,8 +22,8 @@ task :pronto do
 
   formatter = Pronto::Formatter::GithubFormatter.new
   status_formatter = Pronto::Formatter::GithubStatusFormatter.new
-  formatters = [formatter, status_formatter]
-  puts ENV["TRAVIS_PULL_REQUEST_BRANCH"]
-  Pronto.run(ENV["TRAVIS_PULL_REQUEST_BRANCH"], '.', formatters)
+  pr_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
+  formatters = [formatter, status_formatter, pr_formatter]
+  Pronto.run("origin/master", '.', formatters)
 end
 
