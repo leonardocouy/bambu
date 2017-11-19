@@ -3,4 +3,5 @@ cache: bundler
 rvm:
   - 2.4.2
 after_success:
-  - export PRONTO_PULL_REQUEST_ID=${TRAVIS_PULL_REQUEST} && bundle exec pronto run -f github_pr github_status
+  - export PRONTO_PULL_REQUEST_ID=${TRAVIS_PULL_REQUEST} && bundle exec rake pronto
+  - bash <(curl -s https://codecov.io/bash)
