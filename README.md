@@ -1,6 +1,8 @@
 Bambu
 ===========
 
+![](https://travis-ci.com/leonardocouy/bambu.svg?token=bxrKZyktZHisKxWszFGt&branch=master)
+
 ![](https://giphy.com/embed/LE5bApm6m0HrG)
 
 ## Bambu? What the fuck???
