@@ -5,5 +5,7 @@ github:
   access_token: <%= ENV['PRONTO_GITHUB_ACCESS_TOKEN'] %>
   api_endpoint: https://api.github.com/
   web_endpoint: https://github.com/
+github_pr:
+  format: "%{runner} - %{msg}"
 max_warnings: 150
 verbose: true
