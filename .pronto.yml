@@ -1,5 +1,6 @@
 exclude:
   - 'tests/*'
+  - 'Rakefile'
 github:
   slug: leonardocouy/bambu
   access_token: <%= ENV['PRONTO_GITHUB_ACCESS_TOKEN'] %>
