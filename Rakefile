@@ -20,7 +20,7 @@ task :pronto do
     }.freeze
   end
 
-  system 'bundle exec pronto run -f github_pr github_status'
+  system "bundle exec pronto run -f github_pr github_status -c #{ENV["TRAVIS_PULL_REQUEST_BRANCH"]}"
   # status_formatter = Pronto::Formatter::GithubStatusFormatter.new
   # pr_formatter = Pronto::Formatter::GithubPullRequestFormatter.new
   # formatters = [status_formatter, pr_formatter]
