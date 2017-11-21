@@ -1,3 +1,5 @@
+require 'pry'
+
 module Bambu
   class InvalidRowPositionError < StandardError
   end
@@ -13,20 +15,18 @@ module Bambu
 
     ### REFATORAR ESSE TREM!!!!
 
-    attr_reader :lines, :header, :exclude_characters, :errors
+    attr_reader :lines, :params, :header, :exclude_characters, :errors
 
-    def initialize(filename:, exclude_characters: nil, filter: false, header_row: 0, start_row: 1, end_row: -1)
+    def initialize(filename:, params: {}, exclude_characters: nil)
       @filename = filename
-      @filter = filter
-      @header_row = header_row
-      @start_row, @end_row = start_row, end_row
+      @params   = params
       @exclude_characters = exclude_characters
       @errors = []
     end
 
     def read
       read_file
-      filter_rows if @filter
+      filter_rows
       remove_words unless exclude_characters.nil?
       lines
     end
@@ -44,16 +44,32 @@ module Bambu
     def filter_rows
       validate_filter!
 
-      @header = lines[@header_row].split
-      @lines  = lines[@start_row..@end_row]
+      @header = lines[header_row].split
+      @lines  = lines[range_rows]
+    end
+
+    def range_rows
+      (start_row..end_row)
     end
 
     def validate_filter!
-      raise InvalidRowPositionError if lines[@start_row].nil? || lines[@end_row].nil? || lines[@header_row].nil?
+      raise InvalidRowPositionError unless lines[range_rows] && lines[header_row]
     end
 
     def remove_words
       @lines = lines.reject!{|line| line.include?(@exclude_characters)}
+    end
+
+    def header_row
+      params[:header_row] || 0
+    end
+
+    def start_row
+      params[:start_row] || 1
+    end
+
+    def end_row
+      params[:end_row] || -1
     end
   end
 end
